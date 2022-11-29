@@ -2,9 +2,9 @@
 Embrace her, by Sugar Jones........
 
 
-######## Users backend endpoins ########
-	/api/v1/auth/create/user
-	/api/v1/auth/login
+######## Users backend endpoins ########\n
+	/api/v1/auth/create/user\n
+	/api/v1/auth/login\n
 	/api/v1/auth/profile
 	
 	
