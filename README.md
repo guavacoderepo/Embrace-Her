@@ -30,4 +30,3 @@ Embrace her, by Sugar Jones........
 	Password
 	Confirm Password
 	
-	
