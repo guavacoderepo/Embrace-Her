@@ -13,11 +13,21 @@ Embrace her, by Sugar Jones........
 */api/v1/admin/update/user/:_id
 */api/v1/admin/delete/user/:_id
 */api/v1/admin/search=_id
-	
+
+
+####### Admin backend endpoind #########(health tips)
+*/api/v1/health-tips/create
+*/api/v1/health-tips/delete/tips:_id
+*/api/v1/health-tips/update/tips:_id
+*/api/v1/health-tips/search=_id
+
+
 ####### Token endpoind ################
 */api/v1/token/get-all
 */api/v1/token/create/token
 */api/v1/token/update/:_id
+
+
 	
 
 ######### Users Acoount details ###########
