@@ -39,4 +39,9 @@ Nationality
 Token
 Password
 Confirm Password
-	
+
+
+dump bucket 
+add users from admin
+chart 
+
