@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block body %}
+<div class="position-relative"></div>
+<div class="position-absolute top-50 start-50 translate-middle"></div>
+<div class="container overflow-hidden text-center text-dark">
+  <div class="row gy-5">
+    <div class="col-6">
+      <div class="p-5 border" style="background-color : #efc097">
+        <h2>Registered users</h2>
+        <h1>{{allusr}}</h1>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-5 border" style="background-color : #a0d3f2">
+        <h2>Registered Tokens</h2>
+        <h1>{{alltk}}</h1>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-5 border" style="background-color : #9eec9a">
+        <h2>Online Tokens</h2>
+        <h1>{{online}}</h1>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-5 border" style="background-color : #f499a4">
+        <h2>Offline Tokens</h2>
+        <h1>{{offline}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

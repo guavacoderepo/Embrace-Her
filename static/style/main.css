@@ -1,0 +1,40 @@
+body {
+  /* background-image: url('../image/olympics.png'); */
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: auto;
+  font-family: monospace;
+}
+.navbar a {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  color: gainsboro;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+li a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 20px;
+}
+li a:hover {
+  color: gray;
+}
+ul{
+  list-style-type: none;
+}
+table input{
+  border: 0;
+  background-color: transparent;
+  width: 80px;
+}
+
+#content input{
+  border: 0;
+}

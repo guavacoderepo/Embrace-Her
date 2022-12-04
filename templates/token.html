@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% block body %}
+
+<div
+  class="container container-fluid container-sm w-100 font-monospace overflow-hidden"
+>
+  <div class="row">
+    <div class="col-md-8 table-responsive h-100">
+      <div class="container-fluid container-sm">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <!-- <th scope="col">#</th> -->
+              <th scope="col">Token</th>
+              <th scope="col">Validity</th>
+              <th scope="col">Date</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for tk in token %}
+            <form
+              method="POST"
+              action="{{url_for('admin.edit_token', token=tk['Token'])}}"
+            >
+              <tr>
+                <td><input value="{{tk['Token']}}" name="token-data" /></td>
+                {% if tk["valid"] == True %}
+                <td style="color: green">{{tk["valid"]}}</td>
+                {% else %}
+                <td style="color: red">{{tk["valid"]}}</td>
+                {%endif%}
+                <td>
+                  {{tk["Created_at"].day}}/{{tk["Created_at"].month}}/{{tk["Created_at"].year}}
+                </td>
+                <td>
+                  <!-- edit button -->
+
+                 
+                  <button
+                    class="btn btn-outline-success"
+                    onclick="return confirm('Are you sure you want to edit this?');"
+                  >
+                    Edit
+                  </button>
+                  <!-- </a> -->
+                </td>
+                <td>
+                  <!-- delete button -->
+                  <a
+                    href="{{url_for('admin.delete_token', token=tk['Token'])}}"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      onclick="return confirm('Are you sure you want to delete this?');"
+                    >
+                      Delete
+                    </button>
+                  </a>
+                </td>
+              </tr>
+            </form>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3 table-responsive h-100 p-3 m-1 border border-success">
+      token edit section
+    </div>
+  </div>
+</div>
+
+{%endblock%} {%block form%}
+<form
+  action="{{url_for('admin.tokens')}}"
+  class="w-100 bg-white p-3 border-bottom"
+  method="post"
+>
+  New Token: <input name="token" />
+  <button>Add</button>
+
+  Filter Term: <input name="filter" />
+  <button>Filter</button>
+</form>
+{%endblock%}

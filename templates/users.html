@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block body %}
+
+<div class="container-fluid container-sm">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Username</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Origin</th>
+        <th scope="col">Token</th>
+        <th scope="col">Date</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <!-- <th scope="row">1</th> -->
+        <td>{{user["Full_Name"]}}</td>
+        <td>{{user["Email"]}}</td>
+        <td>{{user["Username"]}}</td>
+        <td>{{user["Phone_Number"]}}</td>
+        <td>{{user["Gender"]}}</td>
+        <td>{{user["Nationality"]}}</td>
+        <td>{{user["Token"]}}</td>
+        <td>
+          {{user["Created_at"].day}}/{{user["Created_at"].month}}/{{user["Created_at"].year}}
+        </td>
+        <td>
+          <a href="{{url_for('admin.edit_user', emailid=user['Email'])}}"
+            ><button type="button" class="btn btn-outline-success">Edit</button>
+          </a>
+        </td>
+        <td>
+          <a href="{{url_for('admin.delete_user', token=user['Token'])}}">
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              onclick="return confirm('Are you sure you want to delete?');"
+            >
+              Delete
+            </button>
+          </a>
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %} {%block form%}
+<form class="w-100 bg-white p-3 border-bottom" method="post">
+  category:
+  <select class="" name="category">
+    <option selected disabled>Filter by</option>
+    <option value="Name">Name</option>
+    <option value="Email" selected>Email</option>
+    <option value="Phone_Number" >Phone</option>
+    <option value="Gender">Gender</option>
+    <option value="Username">Username</option>
+    <option value="Nationality">Origin</option>
+  </select>
+  Filter Term: <input name="search" required />
+  <button class="">Filter</button>
+</form>
+{%endblock%}

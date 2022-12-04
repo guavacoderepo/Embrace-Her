@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block body %}
+
+<div
+  class="container container-fluid container-sm w-100 font-monospace overflow-hidden"
+>
+  <div class="row">
+    <div class="col-md-7 table-responsive h-100">
+      <div class="container-fluid container-sm">
+        <!--  -->
+        <div class="fs-5 mb-2 border-0">
+          <input type="text" value="Health tips title" />
+        </div>
+        <div>
+          <textarea class="mb-3 w-100" type="text">Health tips body</textarea>
+        </div>
+        <!--  -->
+
+        <div class="row mb-3">
+          <div class="col-md-6"><button>update</button></div>
+          <div class="col-md-6"><button>Delete</button></div>
+        </div>
+
+        <!--  -->
+        <div class="fs-5 mb-2 border-0">
+          <input type="text" value="Health tips title" />
+        </div>
+        <div>
+          <textarea class="mb-3 w-100" type="text">Health tips body</textarea>
+        </div>
+        <!--  -->
+
+        <div class="row mb-3">
+          <div class="col-md-6"><button>update</button></div>
+          <div class="col-md-6"><button>Delete</button></div>
+        </div>
+        <!--  -->
+      </div>
+    </div>
+
+    <div class="col-md-4 table-responsive h-100 p-3 m-1 border border-success">
+      <h3 class="mb-4">Add Health tips</h3>
+      <!--  -->
+      Title
+      <div class="fs-5 mb-2 border-0">
+        <input type="text" name="tile" />
+      </div>
+      <!--  -->
+      Content
+      <div>
+        <textarea class="mb-3 w-100" type="text"></textarea>
+      </div>
+      <button>post</button>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
