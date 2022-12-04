@@ -6,16 +6,16 @@ would be made on some endpoints as development continues
 
 
 # Users backend endpoins
-* /api/v1/auth/create/user				    done
-* /api/v1/auth/login					    done
+* /api/v1/auth/create/user				    
+* /api/v1/auth/login					   
 * /api/v1/auth/profile	
 	
 	
 # Admin backend user endpoind 
-* /api/v1/admin/users					    done
-* /api/v1/admin/update/user/:_email			done	
-* /api/v1/admin/delete/user/:_email			done	
-* /api/v1/admin/search=_id				    done
+* /api/v1/admin/users					   
+* /api/v1/admin/update/user/:_email				
+* /api/v1/admin/delete/user/:_email				
+* /api/v1/admin/search=_id				    
 
 
 # Admin backend health tips endpoind 
@@ -26,9 +26,9 @@ would be made on some endpoints as development continues
 
 
 # Admin backend Token endpoind
-* /api/v1/token/get-all					    done
-* /api/v1/token/create/token				done
-* /api/v1/token/update/:_id				    done
+* /api/v1/token/get-all					    
+* /api/v1/token/create/token				
+* /api/v1/token/update/:_id				    
 
 
 	
@@ -41,7 +41,7 @@ would be made on some endpoints as development continues
 * Nationality
 * Token
 * Password
-* dConfirm Password
+* Confirm Password
 
 # Future considerations
 * Dump bucket for deleted tokens and account
