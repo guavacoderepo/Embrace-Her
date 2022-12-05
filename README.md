@@ -9,6 +9,7 @@ would be made on some endpoints as development continues
 * /api/v1/auth/create/user				    
 * /api/v1/auth/login					   
 * /api/v1/auth/profile	
+* /api/v1/auth/update/user
 	
 	
 # Admin backend user endpoind 
