@@ -51,3 +51,4 @@ would be made on some endpoints as development continues
 * Edited at
 * Pagination
 * Comma separation
+* Forgotten password
