@@ -53,3 +53,4 @@ would be made on some endpoints as development continues
 * Pagination
 * Comma separation
 * Forgotten password
+* Data logging
